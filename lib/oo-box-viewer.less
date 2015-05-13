@@ -1,0 +1,324 @@
+/*
+basic layout
+******/
+
+.crocodoc-viewer-logo {
+  display: none;
+}
+
+.crocodoc-viewer {
+  width: 500px;
+  height: 500px;
+}
+
+
+body, html, .container, .container-fluid, .col-xs-10, .viewer {
+    height: 100%;
+}
+
+.small-container {
+  margin: 0;
+}
+
+.centered {
+    margin-top: 25%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.flex-center {
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+
+   -webkit-box-align: center;
+   -moz-box-align: center;
+   -ms-flex-align: center;
+   -webkit-align-items: center;
+   align-items: center;
+
+   -webkit-box-pack: center; -moz-box-pack: center;
+   -ms-flex-pack: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+   margin: 0;
+   height: 100%;
+   width: 100%;
+   padding-bottom: 5em;
+}
+
+/*
+typography and buttons
+**********************/
+
+body {
+  font-family: "freight-sans-pro", "Avenir Next", helvetica, sans-serif;
+}
+
+.headline {
+  text-align: center;
+}
+
+.headline h1 {
+  font-size: 5em;
+  font-weight: lighter;
+}
+
+.headline h3 {
+  font-size: 2.4em;
+  font-weight: lighter;
+}
+
+small {
+  font-size: 65%;
+  color: #999;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+}
+
+/* buttons */
+
+.headline .btn {
+  height: 3em;
+  font-size: 1.92em;
+  margin-top: 2em;
+}
+
+.btn-presentation, .btn-presentation:focus {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.btn-presentation:hover {
+  background-color: rgba(240, 240, 240, .8);
+}
+
+.btn-left {
+  background: url(/left-arrow.png) no-repeat;
+  background-position: 50% 50%;
+}
+
+.btn-right {
+  background: url(/right-arrow.png) no-repeat;
+  background-position: 50% 50%;
+}
+
+.btn-left:active {
+  background: url(/left-arrow.png) no-repeat;
+  background-color: rgba(240, 240, 240, .65);
+  background-position: 50% 50%;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-right:active {
+  background: url(/right-arrow.png) no-repeat;
+  background-color: rgba(240, 240, 240, .65);
+  background-position: 50% 50%;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn:focus, .btn:active:focus {
+  outline: none;
+}
+
+.btn {
+  font-weight: bold;
+}
+
+.btn-round-green {
+  background-color: #fff;
+  border-color: rgba(116, 208, 112, 1);
+  color: rgba(116, 208, 112, 1);
+  border-width: .15em;
+  border-radius: 50px;
+}
+
+.btn-round-green:hover {
+  background-color: rgba(116, 208, 112, 1);
+  color: #fff;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -box-shadow: none;
+}
+
+.btn-round-green:focus {
+  background-color: rgba(116, 208, 112, .8);
+  border-color: rgba(116, 208, 112, .8);
+  color: #fff;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -box-shadow: none;
+}
+
+.btn-round-green:visited {
+  background-color: #fff;
+  border-color: rgba(116, 208, 112, 1);
+  color: rgba(116, 208, 112, 1);
+  border-width: .15em;
+  border-radius: 50px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -box-shadow: none;
+}
+
+.btn-round-green:active {
+  background-color: rgba(116, 208, 112, .9);
+  border-color: rgba(116, 208, 112, .9);
+  color: #fff;
+  border-width: .15em;
+  border-radius: 50px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -box-shadow: none;
+}
+
+/*
+third-party element styles
+**************************/
+
+/* viewer.js adjustments */
+
+.viewer {
+    width: 100%;
+}
+
+/* iron-router-progress adjustments */
+
+#iron-router-progress {
+    background-color: rgba(116, 208, 112, 1);
+    box-shadow: 0 0 0 rgba(116, 208, 112, 1);
+}
+
+#iron-router-progress.spinner:before {
+  border-color: rgba(116, 208, 112, 1);
+}
+
+/*
+animations
+**********/
+
+
+// .transparent {
+//   opacity: 0;
+// }
+
+.fade-in {
+  -webkit-animation: fadeIn 1.2s .5s forwards;
+     -moz-animation: fadeIn 1.2s .5s forwards;
+       -o-animation: fadeIn 1.2s .5s forwards;
+          animation: fadeIn 1.2s .5s forwards;
+}
+
+@-webkit-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+   @-moz-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+     @-o-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+        @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+.fade-out {
+  -webkit-animation: fadeOut 1.2s .5s forwards;
+     -moz-animation: fadeOut 1.2s .5s forwards;
+       -o-animation: fadeOut 1.2s .5s forwards;
+          animation: fadeOut 1.2s .5s forwards;
+}
+
+@-webkit-keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
+   @-moz-keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
+     @-o-keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
+        @keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
+
+.bob-up {
+  -webkit-animation: bobUp 1.2s 1.2s forwards;
+     -moz-animation: bobUp 1.2s 1.2s forwards;
+       -o-animation: bobUp 1.2s 1.2s forwards;
+          animation: bobUp 1.2s 1.2s forwards;
+}
+
+@-webkit-keyframes bobUp { 0% { opacity: 0; top: 20em; } 100% { opacity: 1; top: 0; } }
+   @-moz-keyframes bobUp { 0% { opacity: 0; top: 20em; } 100% { opacity: 1; top: 0; } }
+     @-o-keyframes bobUp { 0% { opacity: 0; top: 20em; } 100% { opacity: 1; top: 0; } }
+        @keyframes bobUp { 0% { opacity: 0; top: 20em; } 100% { opacity: 1; top: 0; } }
+
+.pop-out {
+  -webkit-animation: popOut .7s 3.6s forwards;
+     -moz-animation: popOut .7s 3.6s forwards;
+       -o-animation: popOut .7s 3.6s forwards;
+          animation: popOut .7s 3.6s forwards;
+}
+
+@-webkit-keyframes popOut { 0% { opacity: 0; -webkit-transform: scale(0); } 80% { -webkit-transform: scale(1.2); } 100% { opacity: 1; -webkit-transform: scale(1); } }
+   @-moz-keyframes popOut { 0% { opacity: 0; -moz-transform: scale(0); } 80% { -moz-transform: scale(1.2); } 100% { opacity: 1; -moz-transform: scale(1); } }
+     @-o-keyframes popOut { 0% { opacity: 0; -o-transform: scale(0); } 80% { -o-transform: scale(1.2); } 100% { opacity: 1; -o-transform: scale(1); } }
+        @keyframes popOut { 0% { opacity: 0; transform: scale(0); } 80% { transform: scale(1.2); } 100% { opacity: 1; transform: scale(1); } }
+
+.fade-in-long {
+  -webkit-animation: fadeIn 1.2s 2.4s forwards;
+     -moz-animation: fadeIn 1.2s 2.4s forwards;
+       -o-animation: fadeIn 1.2s 2.4s forwards;
+          animation: fadeIn 1.2s 2.4s forwards;
+}
+
+@-webkit-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+   @-moz-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+     @-o-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+        @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+.bob-in {
+  -webkit-animation: bobIn 1.2s 1.2s forwards;
+     -moz-animation: bobIn 1.2s 1.2s forwards;
+       -o-animation: bobIn 1.2s 1.2s forwards;
+          animation: bobIn 1.2s 1.2s forwards;
+}
+
+@-webkit-keyframes bobIn { 0% { opacity: 0; padding-right: 12em; } 100% { opacity: 1; padding-right: 0 } }
+   @-moz-keyframes bobIn { 0% { opacity: 0; padding-right: 12em; } 100% { opacity: 1; padding-right: 0 } }
+     @-o-keyframes bobIn { 0% { opacity: 0; padding-right: 12em; } 100% { opacity: 1; padding-right: 0 } }
+        @keyframes bobIn { 0% { opacity: 0; padding-right: 12em; } 100% { opacity: 1; padding-right: 0 } }
+
+
+/***** "PRESENTATION-SLIDE MODE" PAGE TRANSITIONS *****/
+.crocodoc-presentation-slide .crocodoc-page {
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.4s;
+    transition: opacity 0.2s, transform 0.4s;
+    visibility: visible;
+}
+.crocodoc-presentation-slide .crocodoc-current-page {
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition-delay: 0s, 0s;
+    transition-delay: 0s, 0s;
+    opacity: 1;
+}
+.crocodoc-presentation-slide .crocodoc-page-before {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition-delay: 0.2s, 0s;
+    transition-delay: 0.2s, 0s;
+    opacity: 0;
+}
+.crocodoc-presentation-slide .crocodoc-page-after {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition-delay: 0.2s, 0s;
+    transition-delay: 0.2s, 0s;
+    opacity: 0;
+}

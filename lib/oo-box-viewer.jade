@@ -1,0 +1,7 @@
+template(name="ooBoxViewer")
+  .js-ooBoxViewer.viewer.crocodoc-presentation-slide.transition.transparent.full-height
+  div(oo-Position="")
+    button.js-prevPage(btn="action") Prev
+    button.js-nextPage(btn="action") Next
+  if isLoading
+    +ooLoader color="action" oo="" overlay=true
