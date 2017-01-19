@@ -10,7 +10,7 @@ var C = 'client';
 var CS = [C, S];
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0.2.1');
+  api.versionsFrom('1.2.0.2');
   // Core
   api.use([
     'templating'
@@ -28,7 +28,7 @@ Package.onUse(function(api) {
   api.export('Crocodoc', C);
   // 3rd party
   api.use([
-    'lauricio:less-autoprefixer@1.0.15','mquandalle:jade@0.4.1'
+    'lauricio:less-autoprefixer@2.5.0_3','mquandalle:jade@0.4.1'
     ]);
   api.addFiles('lib/oo-box-viewer.jade', C);
   api.addFiles('lib/oo-box-viewer.js', C);
